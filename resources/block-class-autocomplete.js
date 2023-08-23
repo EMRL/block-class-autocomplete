@@ -1,14 +1,14 @@
+import apiFetch from '@wordpress/api-fetch'
 import { InspectorControls, /* useBlockEditingMode */ } from '@wordpress/block-editor'
 import { hasBlockSupport } from '@wordpress/blocks'
 import { TextControl } from '@wordpress/components'
 import { createHigherOrderComponent } from '@wordpress/compose'
 import { AsyncModeProvider } from '@wordpress/data'
-import { memo, useState, useEffect, useRef } from '@wordpress/element'
+import { memo, useEffect, useRef, useState } from '@wordpress/element'
 import { addFilter, removeFilter } from '@wordpress/hooks'
 import { __ } from '@wordpress/i18n'
 import Awesomplete from 'awesomplete'
 import 'awesomplete/awesomplete.css'
-import apiFetch from '@wordpress/api-fetch'
 
 /**
  * Gets a token (characters between two spaces)

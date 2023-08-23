@@ -1,0 +1,10 @@
+/.wordpress-org/
+.git/
+/.github/
+node_modules/
+/resources/
+.distignore
+.editorconfig
+.gitignore
+/package-lock.json
+/package.json

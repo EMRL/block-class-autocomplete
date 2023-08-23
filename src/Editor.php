@@ -7,8 +7,8 @@ namespace BlockClassAutocomplete;
 final class Editor
 {
     public function __construct(
-        private string $dir,
-        private string $file,
+        private readonly string $dir,
+        private readonly string $file,
     ) {
     }
 

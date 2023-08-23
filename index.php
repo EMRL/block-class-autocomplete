@@ -1,4 +1,7 @@
 <?php
+
+declare(strict_types=1);
+
 /**
  * Plugin Name: Block Class Autocomplete
  * Description: Enables autocomplete for block classes in the Advanced tab.
