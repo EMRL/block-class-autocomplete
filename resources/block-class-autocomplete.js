@@ -103,7 +103,7 @@ const replace = (onChange) => function(text) {
  * @this {Awesomplete}
  * @param {Event} e
  */
- function onHighlight(e) {
+function onHighlight(e) {
     [...this.ul.children].find((i) => i.textContent === e.text.value).scrollIntoView({
         block: 'end',
         inline: 'nearest',
@@ -183,7 +183,7 @@ function initAwesomplete(node, { onChange }) {
  */
 const ClassDatalist = memo(({ classNameSuggestions }) => (
     <datalist id="site-custom-class-names">
-        { classNameSuggestions.map((i) => <option value={ i }/>) }
+        { classNameSuggestions.map((i) => <option key={ i } value={ i }/>) }
     </datalist>
 ))
 
@@ -221,14 +221,14 @@ const Autocomplete = ({ value, onChange }) => {
     return (
         <>
             <TextControl
-              ref={ input }
-              __nextHasNoMarginBottom
-              autoComplete="off"
-              label={ __('Additional CSS class(es)') }
-              value={ value }
-              list="site-custom-class-names"
-              onChange={ onChange }
-              help={ __('Separate multiple classes with spaces.') }/>
+                ref={ input }
+                __nextHasNoMarginBottom
+                autoComplete="off"
+                label={ __('Additional CSS class(es)') }
+                value={ value }
+                list="site-custom-class-names"
+                onChange={ onChange }
+                help={ __('Separate multiple classes with spaces.') }/>
             <AsyncModeProvider value={ true }>
                 <ClassDatalist { ...{ classNameSuggestions } }/>
             </AsyncModeProvider>
@@ -250,12 +250,12 @@ const withInspectorControls = createHigherOrderComponent((BlockEdit) => (props) 
                 <BlockEdit { ...props } />
                 <InspectorControls group="advanced">
                     <Autocomplete
-                      value={ props.attributes.className || '' }
-                      onChange={ (nextValue) => {
-                        props.setAttributes({
-                            className: nextValue !== '' ? nextValue : undefined,
-                        })
-                      } }/>
+                        value={ props.attributes.className || '' }
+                        onChange={ (nextValue) => {
+                            props.setAttributes({
+                                className: nextValue !== '' ? nextValue : undefined,
+                            })
+                        } }/>
                 </InspectorControls>
             </>
         )

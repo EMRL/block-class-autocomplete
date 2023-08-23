@@ -5,6 +5,7 @@ node_modules/
 /resources/
 .distignore
 .editorconfig
+.eslintrc.json
 .gitignore
 /package-lock.json
 /package.json
