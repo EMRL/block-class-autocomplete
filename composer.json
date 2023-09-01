@@ -1,5 +1,5 @@
 {
-    "name": "artiphant/block-class-autocomplete",
+    "name": "emrl/block-class-autocomplete",
     "type": "wordpress-plugin",
     "autoload": {
         "psr-4": {
