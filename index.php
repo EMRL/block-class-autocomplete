@@ -14,15 +14,7 @@ declare(strict_types=1);
  * Text Domain: block-class-autocomplete
  */
 
-define('BLOCK_CLASS_AUTOCOMPLETE_FILE', __FILE__);
-define('BLOCK_CLASS_AUTOCOMPLETE_DIR', __DIR__);
+require_once __DIR__.'/vendor/autoload.php';
 
-require_once BLOCK_CLASS_AUTOCOMPLETE_DIR.'/src/Editor.php';
-require_once BLOCK_CLASS_AUTOCOMPLETE_DIR.'/src/RestApi.php';
-
-(new BlockClassAutocomplete\Editor(
-    dir: BLOCK_CLASS_AUTOCOMPLETE_DIR,
-    file: BLOCK_CLASS_AUTOCOMPLETE_FILE,
-))->register();
-
+(new BlockClassAutocomplete\Editor(__FILE__))->register();
 (new BlockClassAutocomplete\RestApi())->register();

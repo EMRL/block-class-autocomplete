@@ -1,0 +1,9 @@
+{
+    "name": "artiphant/block-class-autocomplete",
+    "type": "wordpress-plugin",
+    "autoload": {
+        "psr-4": {
+            "BlockClassAutocomplete\\": "src/"
+        }
+    }
+}

@@ -7,7 +7,6 @@ namespace BlockClassAutocomplete;
 final class Editor
 {
     public function __construct(
-        private readonly string $dir,
         private readonly string $file,
     ) {
     }
@@ -26,7 +25,7 @@ final class Editor
             'version' => '',
         ];
 
-        if (\is_file($path = $this->dir.'/build/index.asset.php')) {
+        if (\is_file($path = dirname($this->file).'/build/index.asset.php')) {
             $asset = require $path;
         }
 
