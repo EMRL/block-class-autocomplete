@@ -24,6 +24,8 @@ Enables autocomplete for block classes in the Advanced tab.
 
 It allows you to add CSS class suggestions to the "Additional CSS Class(es)" field in the Advanced tab of a block.
 
+[View development repository and source code](https://github.com/EMRL/block-class-autocomplete)
+
 == Screenshots ==
 
 1. Example of the autocomplete suggestions for available CSS classes.

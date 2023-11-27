@@ -14,6 +14,10 @@ declare(strict_types=1);
  * Text Domain: block-class-autocomplete
  */
 
+if (!defined('ABSPATH')) {
+    exit;
+}
+
 require_once __DIR__.'/vendor/autoload.php';
 
 (new BlockClassAutocomplete\Editor(__FILE__))->register();
